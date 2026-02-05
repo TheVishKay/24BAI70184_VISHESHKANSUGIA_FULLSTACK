@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CareerNest Portal</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f6fa;
+        }
+
+        /* Header */
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 35px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar h2{
+            color: #2c3e50;
+        }
+
+        .navbar a{
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+
+        .navbar a:hover{
+            color: #4b7bec;
+        }
+
+        /* Hero Section */
+        .hero{
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #eaf0ff;
+        }
+
+        .hero h1{
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .hero p{
+            color: #555;
+        }
+
+        .search-area input{
+            width: 260px;
+            height: 32px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 10px;
+        }
+
+        .search-area button{
+            height: 36px;
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4b7bec;
+            color: white;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .search-area button:hover{
+            background-color: white;
+            color: #4b7bec;
+            border: 2px solid #4b7bec;
+        }
+
+        /* Sections */
+        .section{
+            padding: 30px 40px;
+            background-color: white;
+            margin: 30px;
+            border-radius: 8px;
+        }
+
+        /* Job Table */
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td{
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th{
+            background-color: #4b7bec;
+            color: white;
+        }
+
+        .apply{
+            padding: 6px 14px;
+            border-radius: 4px;
+            border: 2px solid #4b7bec;
+            background-color: white;
+            color: #4b7bec;
+            font-weight: bold;
+        }
+
+        .apply:hover{
+            background-color: #4b7bec;
+            color: white;
+        }
+
+        /* Footer */
+        .footer{
+            text-align: center;
+            padding: 15px;
+            background-color: #eaf0ff;
+            font-size: small;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>🧭 CareerNest</h2>
+        <div>
+            <a href="#">Jobs</a>
+            <a href="#">Companies</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Your Career Starts Here</h1>
+        <p>Discover jobs that fit your skills and passion</p>
+
+        <div class="search-area">
+            <input type="text" placeholder="Search job role">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="section">
+        <h2>Top Categories</h2>
+        <ul>
+            <li>Software Development</li>
+            <li>Artificial Intelligence</li>
+            <li>Data Analytics</li>
+            <li>Cyber Security</li>
+            <li>Digital Marketing</li>
+        </ul>
+    </div>
+
+    <!-- Jobs -->
+    <div class="section">
+        <h2>Featured Opportunities</h2>
+
+        <table>
+            <tr>
+                <th>Role</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Experience</th>
+                <th>Apply</th>
+            </tr>
+
+            <tr>
+                <td>Frontend Developer</td>
+                <td>Accenture</td>
+                <td>Gurgaon</td>
+                <td>0–2 Years</td>
+                <td><button class="apply">Apply</button></td>
+            </tr>
+
+            <tr>
+                <td>AI Engineer</td>
+                <td>TechNova</td>
+                <td>Bangalore</td>
+                <td>2+ Years</td>
+                <td><button class="apply">Apply</button></td>
+            </tr>
+
+            <tr>
+                <td>System Analyst</td>
+                <td>HCL</td>
+                <td>Noida</td>
+                <td>1–3 Years</td>
+                <td><button class="apply">Apply</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 CareerNest | Building Careers, Creating Futures
+    </div>
+
+</body>
+</html>
