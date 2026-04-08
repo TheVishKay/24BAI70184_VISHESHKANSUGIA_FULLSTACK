@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Job Posting | JobConnect</title>
+		<style>
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+			.blank {
+				flex-grow: 2;
+			}
+			.nav {
+				margin-top: 50px;
+				margin-left: 70px;
+				margin-right: 70px;
+				margin-bottom: 75px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				gap: 50px;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			.logo {
+				color: #0a1d37;
+				font-size: x-large;
+			}
+			.buttons {
+				display: grid;
+				border: 2px solid rgba(0, 0, 0, 0.05);
+				border-radius: 100px;
+				width: 100px;
+				height: 40px;
+				place-items: center;
+			}
+			a {
+				text-decoration: none;
+			}
+			a.nav-buttons {
+				color: #0066ff;
+			}
+			a.reg {
+				color: #f4f7fa;
+			}
+			a.nav-buttons:hover {
+				color: #01398d;
+			}
+			a.reg:hover {
+				color: #e0ebf7;
+			}
+			.buttons-reg {
+				display: grid;
+				border: 2px solid rgba(0, 0, 0, 0.05);
+				border-radius: 100px;
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				place-items: center;
+				background-color: #0066ff;
+			}
+			.main {
+				margin: 50px 70px;
+				gap: 60px;
+			}
+			.form-submission {
+				background-color: #f4f7fa;
+				padding: 30px;
+				border-radius: 15px;
+				border: 2px solid rgba(0, 0, 0, 0.05);
+			}
+			input::placeholder,
+			textarea::placeholder {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				color: rgba(0, 0, 0, 0.289);
+				font-weight: 500;
+			}
+			.form-button {
+				display: flex;
+				gap: 20px;
+			}
+			#reset,
+			#submit,
+			.apply-btn {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				color: #f4f7fa;
+				font-size: medium;
+				border: 2px solid rgba(0, 0, 0, 0.05);
+				border-radius: 100px;
+				width: 100px;
+				height: 40px;
+				place-content: center;
+				background-color: #0066ff;
+			}
+			#reset:hover,
+			#submit:hover,
+			.apply-btn:hover {
+				color: #e0ebf7;
+			}
+			#reset:active,
+			#submit:active,
+			.apply-btn:active {
+				transform: scale(0.95);
+			}
+			#jobCardsContainer {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 30px;
+				margin-top: 25px;
+				justify-content: start;
+			}
+			.job-card {
+				width: 300px;
+				min-height: 250px;
+				background-color: #f4f7fa;
+				padding: 20px;
+				border-radius: 15px;
+				border: 2px solid rgba(0, 0, 0, 0.05);
+			}
+			.footer {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				gap: 30px;
+				justify-content: center;
+				align-items: center;
+				margin-top: 75px;
+			}
+			.footer-buttons {
+				color: #0066ff;
+			}
+			a.footer-buttons:hover {
+				color: #01398d;
+			}
+			.copyright {
+				display: flex;
+				padding-top: 25px;
+				justify-content: center;
+			}
+			input:not([type="checkbox"]):not([type="radio"]),
+			select,
+			textarea {
+				width: 100%;
+				padding: 10px 15px;
+				border: 2px solid rgba(0, 0, 0, 0.1);
+				border-radius: 8px;
+				outline: none;
+				font-size: 14px;
+				transition: 0.3s ease;
+				box-sizing: border-box;
+			}
+			input:not([type="checkbox"]):focus,
+			select:focus,
+			textarea:focus {
+				border-color: #0066ff;
+				box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="logo">JobConnect</div>
+			<div class="blank"></div>
+			<div class="buttons"><a class="nav-buttons" href="#">Find Jobs</a></div>
+			<div class="buttons"><a class="nav-buttons" href="#">Companies</a></div>
+			<div class="buttons">
+				<a class="nav-buttons" href="exp4.html">Post a Job</a>
+			</div>
+			<div class="buttons-reg"><a class="reg" href="#">Sign Up</a></div>
+			<div class="buttons-reg"><a class="reg" href="#">Log In</a></div>
+		</div>
+		<div class="main">
+			<div class="form-submission">
+				<form id="jobPostingForm" action="">
+					<label>Job Title</label>
+					<input
+						id="title"
+						type="text"
+						name="ftitle"
+						placeholder="Job Title"
+						required /><br /><br />
+					<label>Company Name</label>
+					<input
+						id="company-name"
+						type="text"
+						name="fcompany"
+						placeholder="Company Name"
+						required /><br /><br />
+					<label>Location</label>
+					<input
+						id="location"
+						type="text"
+						name="flocation"
+						placeholder="Location"
+						required /><br /><br />
+					<label>Salary</label>
+					<input
+						id="salary"
+						type="text"
+						name="fsalary"
+						placeholder="Salary"
+						required /><br /><br />
+					<label>Job type</label><br />
+					<input type="radio" id="fulltime" name="jobtype" value="Full-time" />
+					<label for="fulltime">Full-time</label><br />
+					<input type="radio" id="parttime" name="jobtype" value="Part-time" />
+					<label for="parttime">Part-time</label><br />
+					<input type="radio" id="remote" name="jobtype" value="Remote" />
+					<label for="remote">Remote</label><br /><br />
+					<label>Job Description</label><br />
+					<textarea
+						id="description"
+						rows="5"
+						cols="30"
+						name="fskill"
+						placeholder="Enter job description"></textarea
+					><br /><br />
+					<div class="form-button">
+						<input id="submit" type="submit" value="Submit" />
+						<!--<input id="reset" type="reset" value="Reset">-->
+					</div>
+				</form>
+			</div>
+
+			<h2>Posted Jobs</h2>
+			<div id="jobCardsContainer"></div>
+		</div>
+		<div class="footer">
+			<div><a class="footer-buttons" href="#">About Us</a></div>
+			<div><a class="footer-buttons" href="#">Contact</a></div>
+			<div><a class="footer-buttons" href="#">Terms</a></div>
+			<div><a class="footer-buttons" href="#">Privacy</a></div>
+		</div>
+		<div class="copyright">&copy; Copyright 2026 | JobConnect</div>
+
+		<script>
+			document
+				.getElementById("jobPostingForm")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+					let title = document.getElementById("title").value;
+					let company = document.getElementById("company-name").value;
+					let location = document.getElementById("location").value;
+					let salary = document.getElementById("salary").value;
+					let jobType = document.querySelector('input[name="jobtype"]:checked');
+					let selectedType = jobType ? jobType.value : "Not specified";
+					let description = document.getElementById("description").value;
+
+					let card = document.createElement("div");
+					card.classList.add("job-card");
+					card.innerHTML = `
+            <h3>${title}</h3>
+            <p><strong>Company:</strong> ${company}</p>
+            <p><strong>Location:</strong> ${location}</p>
+            <p><strong>Salary: </strong> Rs. ${salary}</p>
+            <p><strong>Job Type:</strong> ${selectedType}</p>
+            <p><strong>Description:</strong> ${description}</p>
+            <button class="apply-btn">Apply</button>
+        `;
+					document.getElementById("jobCardsContainer").prepend(card);
+					e.target.reset();
+				});
+		</script>
+	</body>
+</html>
